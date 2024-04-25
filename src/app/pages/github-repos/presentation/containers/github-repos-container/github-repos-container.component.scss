@@ -12,3 +12,11 @@
     margin: 20px 0;
   }
 
+  @media screen and (max-width: 650px) {
+    .search {
+      width: 100%; // Adjust as needed
+      padding: 0 20px; // Add padding for smaller screens
+    }
+  }
+
+

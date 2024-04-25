@@ -24,6 +24,7 @@ mat-sidenav {
 
 @media screen and (max-width: 650px) {
   .content {
-    width: max-content;
+    width: calc(100% - 105px);
+    margin-left: 40px !important;
   }
 }
