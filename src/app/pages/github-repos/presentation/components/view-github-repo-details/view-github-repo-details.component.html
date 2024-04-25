@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-content>
+    {{ githubRepo | json}}
+    <div class="info">
+     <p> Just outputing the whole content of the selected Github Repo.</p>
+
+      <a href=""></a>
+
+      <a href="{{ githubRepo.html_url }}" target="_blank">Click to see the specific's repo page</a>
+    </div>
+  </mat-card-content>
+</mat-card>

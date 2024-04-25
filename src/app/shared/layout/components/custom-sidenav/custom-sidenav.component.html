@@ -1,0 +1,45 @@
+<div class="sidenav-header">
+  <img
+    [width]="profilePicSize()"
+    [height]="profilePicSize()"
+    [src]="user?.picture!"
+    alt="User profile"
+  />
+  <div class="header-text" [class.hide-header-text]="sideNavCollapsed()">
+    <h2>{{ user?.name }}</h2>
+    <p>{{ user?.email }}</p>
+  </div>
+</div>
+<mat-nav-list>
+  @for (item of sidenavItems; track item) {
+    <a
+      mat-list-item
+      class="menu-item"
+      [class.selected-menu-item]="item.active"
+      routerLinkActive="selected-menu-item"
+      #rla="routerLinkActive"
+      [activated]="rla.isActive"
+      (click)="onSelectedSidenavItem(item)"
+    >
+      <mat-icon
+        [fontSet]="rla.isActive ? 'material-icons' : 'material-icons-outlined'"
+        matListItemIcon
+        >{{ item.matIcon }}</mat-icon
+      >
+      <span matListItemTitle *ngIf="!sideNavCollapsed()">{{ item.text }}</span>
+    </a>
+  }
+
+  <a
+    mat-list-item
+    class="menu-item"
+    (click)="onLogoutSelected()"
+  >
+    <mat-icon
+      [fontSet]="'material-icons-outlined'"
+      matListItemIcon
+    >logout</mat-icon
+    >
+    <span matListItemTitle *ngIf="!sideNavCollapsed()">Logout</span>
+  </a>
+</mat-nav-list>

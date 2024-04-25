@@ -1,0 +1,17 @@
+.list-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  &.full {
+    height: auto;
+  }
+
+  &.mini {
+    height: 250px;
+  }
+}

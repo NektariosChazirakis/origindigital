@@ -1,0 +1,23 @@
+
+@if(githubReposSearchResults) {
+  @if(loading) {
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  } @else {
+    <app-github-repos-table-view
+      [data]="githubReposSearchResults.items"
+      (selectedGithubRepo)="onSelectedGithubRepo($event)"
+    ></app-github-repos-table-view>
+
+    <div class="paginator">
+      @if(paginatorReady) {
+        <mat-paginator
+          [length]="githubReposSearchResults.total_count"
+          [pageSize]="pageSize"
+          [pageSizeOptions]="[10, 15, 20]"
+          [showFirstLastButtons]="true"
+          (page)="onChangedPageData($event)"
+        ></mat-paginator>
+      }
+    </div>
+  }
+}

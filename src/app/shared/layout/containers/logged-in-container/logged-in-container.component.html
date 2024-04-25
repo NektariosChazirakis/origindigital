@@ -1,0 +1,6 @@
+<app-logged-in-layout
+  [user]="(user$ | async)!"
+  [sidenavItems]="sidenavItems"
+  (sidenavItemSelected)="handleSelectedSidenavItem($event)"
+  (logoutSelected)="handleLogout()"
+></app-logged-in-layout>

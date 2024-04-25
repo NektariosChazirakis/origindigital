@@ -1,0 +1,15 @@
+<app-github-repos-search-filter class="search"
+  (changedSearchText)="onChangedSearchText($event)"
+></app-github-repos-search-filter>
+
+<div class="github-repos-list">
+  <app-github-repos-list
+    [loading]="(githubIsLoading$ | async)!"
+    [githubReposSearchResults]="(githubReposSearchResults$ | async)!"
+    [pageIndex]="(githubPageIndex$| async)!"
+    [pageSize]="(githubPageSize$ | async)!"
+    (changedPageIndex)="onChangedPageIndex($event)"
+    (changedPageSize)="onChangedPageSize($event)"
+    (selectedGithubRepo)="onSelectedGithubRepo($event)"
+  ></app-github-repos-list>
+</div>

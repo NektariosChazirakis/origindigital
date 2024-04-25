@@ -1,0 +1,15 @@
+
+
+  .search-form {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+
+    .mat-mdc-form-field {
+      display: flex;
+      width: 80%;
+    }
+  }
+
