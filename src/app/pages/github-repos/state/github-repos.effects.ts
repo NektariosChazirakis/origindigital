@@ -1,11 +1,12 @@
-import {Injectable} from "@angular/core";
 import {Actions, createEffect, ofType} from "@ngrx/effects";
-import {GithubReposActions} from "./github-repos.actions";
-import {catchError, combineLatestAll, exhaustMap, map, of, withLatestFrom} from "rxjs";
-import {GithubReposService} from "../api/githubRepos.service";
-import {AppState} from "../../../core/state/app.state";
-import {Store} from "@ngrx/store";
+import {catchError, exhaustMap, map, of, withLatestFrom} from "rxjs";
 import {selectPageIndex, selectPageSize, selectSearchText} from "./github-repos.selectors";
+
+import {AppState} from "../../../core/state/app.state";
+import {GithubReposActions} from "./github-repos.actions";
+import {GithubReposService} from "../api/githubRepos.service";
+import {Injectable} from "@angular/core";
+import {Store} from "@ngrx/store";
 
 @Injectable()
 export class GithubReposEffects {

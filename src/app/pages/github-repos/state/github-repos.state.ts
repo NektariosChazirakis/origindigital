@@ -1,7 +1,5 @@
-import {DataLoadingStatus} from "../../../core/models/data-loading-status.enum";
 import {GithubReposResponse} from "../models/github-response.interface";
 import {Item} from "../models/item.interface";
-import {GithubReposRequest} from "../models/github-repos-request.interface";
 
 export interface GithubReposState {
   searchText: string;
