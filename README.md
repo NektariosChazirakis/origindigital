@@ -32,6 +32,10 @@ Although not in the requirements, the user needs to Authenticate before using th
 
 email: nektarios.chazirakis@gmail.com password: Orig!nDigital2024
 
+Although state management for such a small project can be achieved via simple solutions (like BehaviourSubjects, or NgRx Component store) I have also used NgRx, just to simulate how an enterprise app shall be designed. In addition, I have also designed the folder structure in such a way, to mimic the structure and the architecture or a much larger, enterpize project.
+
+Certain parts of the requirements have been left out intentionally, as I believe the purpose of this task was to showcase techniques and best practices for designing and implementing an Angular enterprize application.
+
 
 ## Further help
 
